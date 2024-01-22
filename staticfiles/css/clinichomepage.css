@@ -1,0 +1,99 @@
+.h1{
+    text-transform: capitalize;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(11, 11, 11),rgb(98, 228, 228));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: aqua;
+    position: absolute;
+    left: 450px;
+    top: 330px;
+    width: 600px; 
+    font-size: 60px;
+    
+    
+
+}
+.img{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    left:200px ;
+    
+
+}
+.btn1{
+    position: absolute;
+    top: 420px;
+    left: 250px;
+    box-shadow:1px 2px black ;
+    color: aliceblue;
+    background-color: rgb(63, 103, 43);
+
+}
+
+    
+
+.img2{
+    width: 150px;
+    height: 190px;
+    position: absolute;
+    top: 250px;
+    left: 1000px;
+    
+}
+
+    
+
+
+a{
+    color: rgb(11, 11, 11);
+    text-decoration: none;
+}
+.div{
+    background-image: url(peditrision.jpg);
+    background-repeat: no-repeat;
+    height: 900px;
+    width: 300px;
+    background-size: cover;
+    
+    
+}
+p{
+    text-align: center;
+}
+.nav-link{
+    color: rgb(10, 10, 10);
+    
+
+    
+}
+.nav{
+    font-size: 20px;
+}
+.nav-li{
+    position: absolute;
+    left: 1200px;
+    top: 300px;
+}
+.nav-lik{
+    position: absolute;
+    left:1300px;
+    top:400px ;
+}
+.nav-lin{
+    position: absolute;
+    left:1400px;
+   
+ top: 400px;
+}
+.card{
+    width: 200px;
+    height: 100px;
+}
+.row{
+    position: absolute;
+    top: 900px;
+    left: 500px;
+}

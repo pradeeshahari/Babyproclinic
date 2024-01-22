@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+</head>
+<body>
+    
+    <h1>update Doctor</h1>
+    <p id="error" style="color: red;"></p> 
+    <div class="form" action=" " id="add">
+        <p class="para" style="color: rgb(7, 92, 32);">{{para}}</p>
+    <form action="" method="POST" id ="clr" novalidate enctype="multipart/form-data">
+        {% csrf_token %}
+        
+    <label for="">Username</label>
+    <input type="text" name="username" id="" placeholder="" value="{{s_update.username}}" ><br><br>
+    <label for="">password</label>
+    <input type="password" name="password" id="pass" placeholder="" value="{{s_update.password}}" ><br><br>
+    <label for="">roll no</label>
+    <input type="number" name="roll_no" id="" placeholder="id" value="{{s_update.roll_no}}"  ><br><br>
+    <label for="">age</label> 
+    <input type="number" name="age" id="" value="{{s_update.age}}" ><br><br>
+    <label for="">images</label>
+    <input type="file" name="image" id="" value="{{s_update.images}}">
+    <label for="">gender</label>
+    <select name="gender" id="gender" value="{{s_update.gender}}" >
+        <option value="male">male</option>
+        <option value="female">female</option>
+    
+
+    </select><br><br>
+    <label for="">phone number</label>
+    <input type="number" name="no"  id=""  value="{{s_update.number}}"><br><br>
+    <input type="submit" value="updatedoctor" >
+    
+    
+    
+    
+    </form>
+    
+
+</div>
+
+
+
+
+</body>
+</html>

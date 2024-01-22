@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=DM+Serif+Display:ital@1&family=Dancing+Script:wght@400;500&family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        .div{
+            position: absolute;
+            left: 500px;
+            top: 60px;
+            width: 1200px;
+            height: 600px;
+            opacity: 0.7;
+
+
+        }
+            
+        h1{
+            text-align: center;
+            color:rgb(26,26,26);
+            font-style: italic;
+        }
+        .p1{
+            
+            font-size: 30px;
+            text-align: center;
+            position: absolute;
+            top: 850px;
+            left: 630px;
+            color: rgb(26, 26, 26);
+            font-style: italic;
+            
+
+        }
+        .p1:hover{
+            background-color: rgb(116, 235, 235);
+        }
+        .p2{
+            position: absolute;
+            top: 900px;
+
+
+            font-size: 30px;
+            text-align: center;
+            color: aliceblue;
+        }
+        .container-fluid{
+            background-color: white;
+            
+        
+            
+        }
+        h2{
+            position: absolute;
+            top: 20px;
+            left: 500px;
+            background: -webkit-linear-gradient(rgb(246, 104, 220),rgb(12, 12, 12));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    
+        }
+        .img1{
+            position: absolute;
+            top: 600px;
+            left: 150px;
+            filter: drop-shadow(5px 5px rgb(105, 104, 104));
+        }
+        .img2{
+            position: absolute;
+            top: 600px;
+            left: 600px;
+            filter: drop-shadow(5px 5px rgb(105, 104, 104));
+        }
+        .img3{
+            position: absolute;
+            top: 600px;
+            left: 1000px;
+            filter: drop-shadow(5px 5px rgb(105, 104, 104));
+            
+        }
+        .p3{
+            position: absolute;
+            left: 300px;
+            font-style: italic;
+            font-size: 30px;
+            color:rgb(15, 14, 14) ;
+            
+            
+        }
+        .p2{
+            position: absolute;
+            top: 770px;
+            left: 250px;
+            color:rgb(26,26,26) ;
+        }
+        .p5{
+            position: absolute;
+            left: 700px;
+            top: 770px ;
+            font-size: 20px;
+            color: rgb(26, 26, 26);
+        }
+        .p4{
+            position: absolute;
+            left: 1100px;
+            top: 770px ;
+            font-size: 30px;
+            color: rgb(22, 22, 22);
+            
+        }
+        .icon{
+            position: absolute;
+            top: 30px;
+            left: 1400px;
+            
+        }
+
+
+    </style>
+</head>
+<body style="background-image: url(https://media.istockphoto.com/id/1169662101/photo/adult-and-child-hands-holding-red-heart-on-aqua-background-heart-health-donation-csr-concept.jpg?s=612x612&w=0&k=20&c=NSzjKdMvCt4YrTr2PSrq1tIfDPbljz6t7IJ1GQ7bquU=);background-repeat: no-repeat; background-size: cover; height: 1000px;">
+    <body style="background-image: url();background-repeat: no-repeat; background-size: cover; height: 1000px;">
+    <div class="container-fluid">
+        <img src="{% static 'images\pediatric icon.jpg' %}" alt="">
+        <h2>PEDIATRIC HOSPITAL MANAGEMENT</h2>
+    </div>
+
+    <h1>About Us</h1>
+    <p  class="p3">Our Branchs of medicine dealing with the health and medical care of infants,<br> children and adolescents from birth up to the age of 18  our doctots are <br>responsible for helping patients adapt to a hospital setting and prepare<br> them for medical treatment and procedures<br> their plays an important role in the health and wellbeing of ypur child <br> .they have a wide range of responsibilities from conducting regular well-child<br> checkups to diagonosing and treating illness,injuries and other health conditions</p>
+    <div>
+<img class="img1" src="{% static 'images/hospital0.jpeg' %}" alt="">
+<img class="img2" src="{% static 'images/hospital2.jpg' %}" alt="">
+<img class="img3" src="{% static 'images/hospital10.jpg' %}" alt="">
+    </div>
+    
+    
+<p class="p1">pediatric Helpline <br> 9+9087545667</p>
+<p class="p2" >palakkad</p>
+<p class="p5">Thrissur</p>
+<p class="p4">kozhikkode</p>
+<div class="icon">
+  <a href="{% url 'patientapp:home' %}"><img src="{% static 'images/home.png' %}" alt=""></a>
+  </div>
+</body>
+</html> 

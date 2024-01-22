@@ -1,0 +1,46 @@
+h1{
+    background-color: rgb(245, 240, 240);
+    color: rgb(6, 59, 59);
+    text-align: center;
+    opacity: 0.9;
+    height: 50px;
+}
+.home{
+    position: absolute;
+    left:20px ;
+    top: 7px;
+}
+.doc{
+    position: absolute;
+    left: 500px;
+    top: 200px;
+
+}
+.pat{
+    position: absolute;
+    left: 1000px;
+    top: 200px;
+}
+.imge{
+    position: absolute;
+
+    
+
+}
+body{
+    background-image: linear-gradient(white,rgb(109, 225, 208));
+    height: 900px;
+}
+.doct{
+position: absolute;
+     margin-top: 250px;
+    margin-left: 500px;
+    border-radius: 20px;
+    border-color: aquamarine;
+ }
+ .pati{
+    margin-top: 250px;
+    margin-left: 1000px;
+    border-radius: 20px;
+    border-color: aquamarine;
+ }

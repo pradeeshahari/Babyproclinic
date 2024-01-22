@@ -1,0 +1,24 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: rgb(245, 237, 253);
+    
+}
+table:hover{
+    background-color: rgb(202, 202, 249);
+}
+td,th{
+    border: 1px solid black;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    
+}
+h1{
+    text-align: center;
+    color: rgb(35, 35, 78);
+}
+div{
+    background-image: linear-gradient(pink,rgb(184, 184, 106));
+    height: 700px;
+}

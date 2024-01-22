@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+    <link rel="stylesheet" href="{% static 'css/adminlogin.css' %}">
+    <style>
+.and{
+    text-decoration: none;
+    position: absolute;
+    bottom: 670px;
+    right: 1390px;
+    color: rgb(225, 47, 47);
+    font-size: 15px;
+
+}
+    </style>
+
+</head>
+<body>
+    
+    <form action="" method="post"  name="adminlogin" id=" loginform1" onsumbit="return loginform()">
+        {% csrf_token %}
+    <h1>LOGIN PORTAL</h1>
+    <div class="form">
+    <div class="form1">
+    <label class="lable" for="">username</label>
+    <input type="text" name="user" id="Admin" ><br><br>
+    <label class="lable2" for="">password</label>
+    <input type="password" name="pass1" id="Pass" palceholder="password"><br><br>
+    <p style="color: red;">{{msg}}</p> 
+    <a href=""><button class="btn" type="submit">Login</button></a>
+    </div>
+    
+    <a class= "and" href="{% url 'patientapp:home' %}"><img src="{% static 'images\home.png'%}" alt=""></a>
+</div>
+</form>
+    
+        
+<script src="{% static 'js/adminlogin.js' %}"></script>
+    
+</body>
+</html>

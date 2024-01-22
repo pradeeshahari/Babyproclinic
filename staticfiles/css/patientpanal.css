@@ -1,0 +1,35 @@
+.btn-secondary1{
+    position: absolute;
+    left:467px ;
+    background-color: rgb(171, 171, 244);
+    border-radius: 20px 10px;
+    border-color: rgb(133, 133, 227);
+    background-image: linear-gradient(rgb(163, 163, 233), rgb(188, 224, 179));
+    font-weight: 400px;
+    color: rgb(4, 19, 32);
+
+ }
+ .btn-secondary{
+    background-color:rgb(171, 171, 244) ;
+    border-radius: 20px 10px;
+    border-color: rgb(133, 133, 227);
+    background-image: linear-gradient(rgb(163, 163, 233), rgb(188, 224, 179));
+    font-weight: 400px;
+ 
+    
+ }
+div{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 1700px;
+ }
+h1{
+    text-align: center;
+    color: rgb(120, 145, 145);
+ }
+ a{
+  text-decoration:none ;
+  color: rgb(24, 24, 24);
+ }

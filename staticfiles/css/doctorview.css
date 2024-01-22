@@ -1,0 +1,70 @@
+table,td,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-color: rgb(70, 70, 71);
+    text-align: center;
+
+}
+td,th{
+    padding: 10px;
+    padding-left: 70px;
+    
+
+}
+
+h1{
+    text-align: center;
+    background-image:linear-gradient(rgb(144, 133, 135),rgb(111, 111, 158));
+    color: rgb(201, 243, 243);
+}
+button{
+    border-radius: 40px;
+    background-color: rgb(175, 195, 207);
+    font-size: 15px;
+    color: rgb(49, 47, 47);
+    margin-left: 500px;
+    position: absolute;
+    left: 680px;
+    top: 519px;
+    border-color: rgb(175, 195, 207);
+    border-right-color: rgb(175, 195, 207);
+    border-bottom-color: rgb(175, 195, 207);
+}
+img{
+    width: 100px;
+    box-shadow: 10px 10px 10px  10px rgb(132, 132, 153) ;
+    position: absolute;
+    top: 400px;
+    right: 200px;
+    
+}
+body{
+    background-image:linear-gradient( rgb(181, 225, 226),rgb(179, 179, 216)) ;
+    height: 800px;
+}
+.the{
+    color: rgb(16, 75, 238);
+    
+}
+.upt{
+    position: absolute;
+top: 90px;
+left: 820px;
+background-color: rgb(127, 178, 255);
+color: red;
+
+
+
+}
+.dele{
+position: absolute;
+top: 90px;
+left: 740px;
+background-color: rgb(127, 178, 255);
+color: red;
+
+}
+
+
+
+

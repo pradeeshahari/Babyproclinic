@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css.doctorappointment.css' %}">
+</head>
+<style>
+   table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: rgb(245, 237, 253);
+    
+}
+table:hover{
+    background-color: rgb(202, 202, 249);
+}
+td,th{
+    border: 1px solid black;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    
+}
+h1{
+    text-align: center;
+    color: rgb(35, 35, 78);
+}
+div{
+    background-image: linear-gradient(pink,rgb(184, 184, 106));
+    height: 700px;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+.img{
+    position: absolute;
+    top: 20px;
+    height: 30px;
+}
+</style>
+<body>
+
+    <div>
+<h1>Doctor Appointment </h1>
+<a href="{% url 'doctorapp:log' %}"><img class="img" src="{% static 'images/home.png' %}" alt=""></a>
+
+
+<table >
+    <tr>
+        <th>Name</th>
+        <th>Mobilenumber</th>
+        <th>Timing</th>
+        <th>Address</th>
+        <th>location</th>
+        <th>specialist</th>
+        <th>Doctors name</th>
+        <th>msg</th>
+        <th>status</th>
+        <th>delete</th>
+    </tr>
+    <tr>
+        {% for x in booking %}
+        <td>{{x.name}}</td>
+        <td>{{x.number}}</td>
+        <td>{{x.time}}</td>
+        <td>{{x.address}}</td>
+        <td>{{x.location}}</td>
+        <td>{{x.specialist}}</td>
+        <td>{{x.doctors}}</td>
+        <td>{{x.msg}}</td>
+        <td><a href="{% url 'doctorapp:status_update' x.id %}">{{x.status}}</a></td>
+        <td><a href="{% url 'doctorapp:x_delete' x.id %}"class="btn btn-danger">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+  
+</body>
+</html>

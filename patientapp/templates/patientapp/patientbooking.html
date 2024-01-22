@@ -1,0 +1,149 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/patientbooking.css' %}">
+
+    <style>
+button{
+    background-color: rgb(174, 174, 232);
+    color: aliceblue;
+    border-radius: 10px 10px;
+    border-color: rgb(174,174,232);
+    width: 100px;
+}
+
+/* .form{
+    border: 1px solid black;
+    width: 250px;
+    text-align: center;
+} */
+.border{
+    text-align: center;
+    position: absolute;
+    top: 130px;
+    left: 600px;
+    border: 1px solid black;
+    height: 500px;
+    width: 300px;
+    
+}
+.border:hover{
+    background-color: rgb(182, 195, 228);
+}
+.patnam{
+    position: absolute;
+    top: 40px;
+    left: 66px;
+    
+}
+.sele{
+    position: absolute;
+    left: 15px;
+}
+.loc{
+    position: absolute;
+    left: 110px;
+    width: 175px;
+}
+.time{
+    width: 168px;
+}
+option{
+    background-color: rgb(181, 181, 208);
+}
+textarea:hover{
+    background-color: rgb(209, 203, 215);
+    
+
+}
+.log{
+    position: absolute;
+    top: 20px;
+    color: azure;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(235, 235, 243);
+    
+
+}
+body{
+    background-color: rgb(224, 123, 123);
+}
+.h1{
+    
+    color: antiquewhite;
+    margin-left: 670px;
+    
+}
+.img{
+    width: 40px;
+    position: absolute;
+    left: 1400px;
+    top: 20px;
+    border-radius: 10px;
+
+}
+
+
+    </style>
+</head>
+<body>
+
+<h1 class="h1">Booking </h1>
+    
+<a  class="log"  href="{% url 'patientapp:home' %}">Logout</a>
+    <form action="" method="post"  name="adminlogin" id="loginform1" onsubmit="return appointmentform()">
+        {% csrf_token %}
+        <div class="border">
+        <input class="patnam" type="text" name="name" id="" placeholder="patient name"><br><br><br><br>
+        <input type="text" name="mob" id="" placeholder="Mobile number"><br><br>
+        <input class="time" type="time" name="time" id="" placeholder="Timing"><br><br>
+        <input type="text" name="address" id="" placeholder="Address"><br><br>
+        <label class="sele" for="">select location</label>
+        <select class="loc"  name="loc" id="">
+            <option value="nil">Select</option>
+            <option value="palakkad">palakkad</option>
+            <option value="alathur">alathur</option>
+            <option value="pattambi">pattambi</option>
+            <option value="mannarkkad">mannarkkad</option>
+            <option value="ottappalam">ottappalam</option>
+            <option value="chittur">chittur</option>
+        </select><br><br>
+        <label for="">select specialists</label>
+        <select name="spl" id=""> 
+        <option value="nil">Select</option>
+         <option value="generalpediatrics">General pediatrics</option>
+         <option value="cardiology">cardiology</option>
+         <option value="Gastroenterology">Gastroenterology</option>
+         <option value="pediatrichemotology">pediatric hemotology</option>
+         
+        </select><br><br>
+
+        <label for="">select doctors</label>
+        <select name="doct" id="">
+        <option value="">Select</option>           
+         <option value="dr.sanjeevkumarTM(pediatrician)">Dr.sanjeev kumar T M (pediatrician)</option>
+         <option value="Dr.Rose(Gastroenterology)">Dr.Rose (Gastroenterology) </option>
+         <option value="Dr.AparnaNamboodiripad(cardiology)">Dr.Aparna Namboodiripad (cardiology)</option>
+         <option value="Dr.VimalVincent(hemotology)">Dr.Vimal Vincent (hemotology)</option>
+        
+        </select><br><br>
+
+        <textarea name="message" id="Message" cols="30" rows="10">Message</textarea><br><br>
+        <button type="submit">BOOking</button>
+    </div>
+    <a href="{% url 'patientapp:bookingstatus' %}"><img class="img" src="{% static 'images/booking.png' %}" alt=""></a>
+
+
+
+    </form>
+</body>
+</html>
+
+

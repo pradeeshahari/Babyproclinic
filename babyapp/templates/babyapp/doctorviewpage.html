@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/doctorview.css' %}"> -->
+    <style>
+    table,td,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-color: rgb(70, 70, 71);
+    text-align: center;
+
+}
+td,th{
+    padding: 10px;
+    padding-left: 70px;
+    
+
+}
+
+h1{
+    text-align: center;
+    background-image:linear-gradient(rgb(144, 133, 135),rgb(111, 111, 158));
+    color: rgb(201, 243, 243);
+}
+button{
+    border-radius: 40px;
+    background-color: rgb(175, 195, 207);
+    font-size: 15px;
+    color: rgb(49, 47, 47);
+    margin-left: 500px;
+    position: absolute;
+    left: 680px;
+    top: 519px;
+    border-color: rgb(175, 195, 207);
+    border-right-color: rgb(175, 195, 207);
+    border-bottom-color: rgb(175, 195, 207);
+}
+
+body{
+    background-image:linear-gradient( rgb(181, 225, 226),rgb(179, 179, 216)) ;
+    height: 800px;
+}
+.the{
+    color: rgb(16, 75, 238);
+    
+}
+.upt{
+    position: absolute;
+top: 90px;
+left: 820px;
+background-color: rgb(127, 178, 255);
+color: red;
+
+
+
+}
+.dele{
+position: absolute;
+top: 90px;
+left: 740px;
+background-color: rgb(127, 178, 255);
+color: red;
+
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+.imag{
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 40px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <a  href="{% url 'babyapp:panel' %}"><img class="imag"  src="{% static 'images/view.png' %}" alt=""></a>
+
+    <h1>View Doctor Details</h1>
+    
+
+    
+    <table class="tab">
+        <tr class="the">
+            <th>username</th>
+            <th>password</th>
+            <th>Id</th>
+            <th>Age</th>
+            <th>image</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Image</th>
+            <th>Delete</th>
+        </tr>
+        {%for i in doc%}
+        <tr>
+            <td>{{i.username}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.doc_id}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.image}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.number}}</td>
+           
+            <td>
+                {% if i.image %}
+                <img src="{{ i.image.url }}" alt="{{ i.username }}" style="max-width: 50px;max-height: 50px;">
+                {% else %}
+                No image
+                {% endif %}
+            </td>
+    
+            <td><a href="{% url 'babyapp:i_delete' i.id %}" class="btn btn-danger">Delete</a></td>
+
+        </tr>
+        {% endfor %}
+    
+    </table>
+</body>
+</html>

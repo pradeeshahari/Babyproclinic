@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/updatedoctor.css' %}">
+    <style>
+        .button{
+            color: rgb(69, 67, 67);
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Doctor Details</h1>
+    <table class="tab">
+        <tr class="the">
+            <th>username</th>
+            <th>password</th>
+            <th>Id</th>
+            <th>Age</th>
+            <th>image</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>update</th>
+            
+        </tr>
+        
+        {% for s in doc2 %}
+        <tr>
+            <td>{{s.username}}</td>
+            <td>{{s.password}}</td>
+            <td>{{s.doc_id}}</td>
+            <td>{{s.age}}</td>
+            <td>{{s.image}}</td>
+            <td>{{s.gender}}</td>
+            <td>{{s.number}}</td>
+    
+            <td><a href="{% url 'babyapp:s_update' s.id %}" class="btn btn-danger">update</a></td>
+
+        </tr>
+        {% endfor %}
+    
+        
+    </table>
+    <a href="{% url 'babyapp:add' %}"><img src="{% static 'images\updatepic.png' %}" alt=""></a>
+</body>
+</html>

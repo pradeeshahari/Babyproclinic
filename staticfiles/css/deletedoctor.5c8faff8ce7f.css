@@ -1,0 +1,51 @@
+table,td,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-color: rgb(191, 191, 235);
+    text-align: center;
+
+}
+td,th{
+    padding: 10px;
+    padding-left: 30px;
+    
+
+}
+
+h1{
+    text-align: center;
+    background-image:linear-gradient(rgb(144, 133, 135),rgb(111, 111, 158));
+    color: rgb(201, 243, 243);
+}
+button{
+    border-radius: 100px;
+    background-color: rgb(15, 143, 222);
+    height: 40px;
+    font-size: 15px;
+    color: rgb(249, 242, 242);
+    margin-left: 500px;
+    position: absolute;
+    left: 680px;
+    top: 160px;
+    border-color: rgb(239, 245, 248);
+    border-right-color: rgb(175, 195, 207);
+    border-bottom-color: rgb(175, 195, 207);
+}
+img{
+    width: 100px;
+    box-shadow: 10px 10px 10px  10px rgb(132, 132, 153) ;
+    position: absolute;
+    top: 400px;
+    right: 200px;
+    
+}
+body{
+    background-image:linear-gradient(rgb(101, 131, 151), rgb(181, 225, 226)) ;
+    height: 800px;
+}
+.the{
+    color: azure;
+}
+.input{
+    margin-left: 400px;
+}

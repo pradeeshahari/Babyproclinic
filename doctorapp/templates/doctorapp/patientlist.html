@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     h1{
+            text-align: center;
+            color: blue;
+        }
+    div{
+            height: 700px;
+            
+        } 
+    
+td,th{
+    padding: 10px;
+    padding-left: 70px;
+    
+
+}
+h1{
+    text-align: center;
+    background-image:linear-gradient(rgb(132, 226, 240),rgb(111, 111, 158));
+    color: rgb(201, 243, 243);
+}
+table{
+    border-collapse: collapse;
+    border-color: black;
+}
+.imag{
+    position: absolute;
+    top: 20px;
+    width: 20;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div style="background-image:linear-gradient(#40E0D0,#DAF7A6);">
+    <h1>patient list </h1>
+    <a class="imag" href="{% url 'patientapp:home' %}"><img src="{% static 'images/home.png' %}" alt="" width="30px" height="40px"></a>
+<table border="1">
+    <tr>
+        <th>Patient Name</th>
+        <th>Email</th>
+        <th>Number</th>
+        <th>password</th>
+        <th>delete</th>
+        
+    </tr>
+    {% for l in patient  %}
+    <tr>
+       
+        <td>{{l.name}} </td>
+        <td>{{l.email}}</td>
+        <td>{{l.number}} </td>
+        <td>{{l.password}}</td>
+        
+
+      <td><a href="{% url 'doctorapp:l_delete' l.id %}" class="btn btn-danger">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+</body>
+</html>

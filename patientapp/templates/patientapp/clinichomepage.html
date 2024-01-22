@@ -1,0 +1,29 @@
+{% extends 'patientapp/masterpatient.html' %}
+{% load static %}
+{% block content %}
+
+
+<body style="background-image: url(https://www.shriramsinghhospital.com/images/pediatrics-doctor-noida.jpg);background-repeat: no-repeat;background-size: cover;">
+   <div class="container">
+    <p class="h1">PEDIATRIC <br> HOSPITAL <br> MANAGEMENT </p>
+    </div>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'babyapp:adminlogin' %}">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'doctorapp:log' %}">Doctorlogin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'patientapp:signup' %}">Patient</a>
+        </li>
+      </ul>
+
+  
+
+    </body>
+    
+    
+    {% endblock %}
+
+  

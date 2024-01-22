@@ -1,0 +1,128 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/patientlogin.css' %}">
+    <style>
+       
+         
+       div{
+           
+           width: 100%;
+           height: 800px;
+       
+           
+          
+           
+       }
+       tr{
+           text-align: center;
+           position: absolute;
+           top: 300px;
+       }
+       td{
+           border-bottom: 1px solid rgb(21, 20, 20);
+       
+       
+           
+           text-align: center;
+       }
+       
+       .user{
+       
+           position: absolute;
+           top: 10px;
+           left: 650px;
+           
+       }
+       .pass{
+       position: absolute;
+       top: 50px;
+       left: 650px;
+       }
+       h1{
+       text-align: center;
+       position: absolute;
+       top: 200px;
+       left: 670px;
+       color: antiquewhite;
+       
+       
+       }
+       input[type="text"]{
+           border: none;
+           background-color: pink;
+       }
+       input[type="password"]{
+           border: none;
+           background-color: pink;
+       }
+       form{
+           border: 1px solid rgb(113, 101, 101);
+       }
+       h4{
+           position: absolute;
+           top: 370px;
+           left: 750px;
+       }
+       .h4{
+           position: absolute;
+           top: 370px;
+           left: 660px;
+       }
+       button{
+           position: absolute;
+           left: 660px;
+           top: 430px;
+           width: 170px;
+           border-radius: 10px;
+           color: rgb(222, 225, 231);
+           background-color: rgb(154, 154, 217);
+           
+       }
+       
+       
+    </style>
+</head>
+<body>
+ 
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        <div style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx9lsY5mSUgIPy6Z55BWagBBBQP_OR1XelKg&usqp=CAU);background-repeat: no-repeat;background-size: cover;"> 
+        <h1>LOGIN</h1>
+        <a href="{% url 'patientapp:home' %}"><img src="{% static 'images/home.png' %}" alt=""></a>
+        <table >
+
+            <tr >
+                <td class="user"><input type="text" name="email" id="" placeholder="Enter your email"></th>
+                </tr>
+                <tr>
+                <td class="pass"><input type="password" name="password" id="" placeholder="Enter your password"></th>
+            </tr>
+            {% if err %}
+         <p  style="color:red">{{ err }}</p>
+           {% endif %} 
+
+        
+        </table>
+        <a href=""><h4>Forgetpassword </h4> </a>
+        <a href="{% url 'patientapp:signup' %}"><h4 class="h4">sign up</h4></a>
+        <button type="submit" >LOG IN</button>
+
+    </div>
+        
+    <input type="submit" value="login">
+    </form>
+    
+    
+
+    
+</body>
+</html>

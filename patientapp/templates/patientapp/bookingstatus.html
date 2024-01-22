@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: radial-gradient(skyblue,white);
+            height: 700px;
+        }
+        h1{
+            text-align: center;
+            color: brown;
+        }
+        table{
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            
+        }
+        td{
+            border: 1px solid rgb(47, 34, 215);
+            border-collapse:collapse ;
+            padding: 20px;
+            width: 300px;
+        }
+        .h1{
+            color: rgb(2, 42, 29);
+        }
+        .tr{
+            color: blueviolet;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <a href="{% url 'patientapp:home' %}"><img src="{% static 'images/home.png' %}" alt=""></a>
+    <h1 class="h1">BookingStatus</h1>
+    <table>
+        <tr class="tr">
+            <td>Name</td>
+            <td>Nime</td>
+            <td>Status</td>
+        </tr>
+        {% for i in booking %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.time}}</td>
+            <td style="color: red;">{{i.status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

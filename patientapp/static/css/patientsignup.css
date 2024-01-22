@@ -1,0 +1,85 @@
+.input{
+    background-color: rgb(197, 197, 246);
+    width: 100px;
+    
+
+
+
+}
+.int1{
+    position: absolute;
+    top: 60px;
+    left: 150px;
+
+}
+ .int2{
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    
+}
+
+ .l1{
+    position:absolute;
+    left: 20px;
+    top: 60px;
+    
+} 
+ .l2{
+    position: absolute;
+    left: 30px;
+    top: 120px;
+}
+.l3{
+    position: absolute;
+    top: 190px;
+    left: 30px;
+}
+.int4{
+    position: absolute;
+    top: 190px;
+    left: 150px;
+}
+
+
+.div1{
+    border: 1px solid black;
+    width: 450px;
+    height: 500px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+} 
+.div2{
+    text-align: center;
+} 
+h1{
+    text-align: center;
+    color: white;
+} 
+.l4{
+    position: absolute;
+    top: 250px;
+    left: 30px;
+}
+.int5{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+.l5{
+    position: absolute;
+    top: 300px;
+    left: 30px;
+}
+.int6{
+    position: absolute;
+    top: 300px;
+    left:150px ;
+}
+button{
+    position: absolute;
+    top: 400px;
+    left: 180px;
+    border-radius: 10px;
+}

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/doctorpanal.css' %}">
+</head>
+<style>
+.img{
+    margin-left: 710px;
+    margin-top: 2px;
+    height: 30px;
+    width: 30px;
+
+  }
+</style>
+<body>
+  
+    <div>
+      
+  <a class="img" href="{% url 'patientapp:home' %}"><img src="{% static 'images/home.png' %}" alt="" style="width: 30px;"></a>
+</div>
+     <div class="div">
+         <a href="{% url 'patientapp:home' %}"><img src="{% static 'images\grp.jpeg' %}" class="img-fluid" alt="..."></a>
+    </div> 
+    <h1>Doctor Panel</h1>
+    <ol class="list-group ">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Add Doctors</div>
+            
+          </div>
+          <a href="{% url 'babyapp:add' %}"><button class="badge bg-primary rounded-pill">Add</button></a>
+        </li><br>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Update Doctors </div>
+            
+          </div><br>
+          <a href="{% url 'babyapp:update' %}"><button class="badge bg-primary rounded-pill"> Upt</button></a>
+        </li><br>
+        
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">View Doctors</div>
+
+            </div>
+            <a href="{% url 'babyapp:view' %}"><button class="badge bg-primary rounded-pill">Viw</button></a>
+          </li><br>
+      </ol>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(61, 248, 148);
+        }
+        table{
+            border: 1px solid rgb(218, 17, 17);
+            border-collapse: collapse;
+            text-align: center;
+            
+
+        }
+        table:hover{
+            background-color: rgb(222, 228, 243);
+        }
+        th{
+            border: 1px solid black;
+            padding: 20px;
+            width: 500px;
+            color: blue;
+            
+        }
+        td{
+            border: 1px solid black;
+            padding: 20px;
+            color: rgb(18, 17, 17);
+            width: 400px;
+            
+        }
+        .msg:hover,td:hover{
+            background-color: rgb(234, 150, 150);
+            
+        }
+        h1{
+            text-align: center;
+            color: brown;
+        }
+        .nam{
+            width: 100px;
+
+        }
+        .img{
+            position: absolute;
+            top: 0px;
+            width: 80px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Contact List</h1>
+    <a href="{% url 'babyapp:portal' %}"><img class="img" src="{% static 'images/home.png' %}" alt="" style="width: 30px;"></a>
+    <div>
+    <table>
+        <tr><th class="nam">Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Delete</th>
+        </tr>
+        <tr>
+            {% for m in msg  %}
+            <td class="nam">{{m.name}}</td>
+            <td>{{m.email}}</td>
+            <td class="msg">{{m.msg}}</td> 
+            <td><a href="{% url 'babyapp:m_delete' m.id %}" class="btn btn-danger">delete</a></td>
+            
+
+
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</body>
+</html>

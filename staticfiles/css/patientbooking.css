@@ -1,0 +1,59 @@
+button{
+    background-color: rgb(174, 174, 232);
+    color: aliceblue;
+    border-radius: 10px 10px;
+    border-color: rgb(174,174,232);
+    width: 100px;
+}
+
+/* .form{
+    border: 1px solid black;
+    width: 250px;
+    text-align: center;
+} */
+.border{
+    text-align: center;
+    position: absolute;
+    top: 130px;
+    left: 600px;
+    border: 1px solid black;
+    height: 500px;
+    width: 300px;
+    
+}
+.border:hover{
+    background-color: rgb(182, 195, 228);
+}
+.patnam{
+    position: absolute;
+    top: 40px;
+    left: 66px;
+    
+}
+.sele{
+    position: absolute;
+    left: 15px;
+}
+.loc{
+    position: absolute;
+    left: 110px;
+    width: 175px;
+}
+.time{
+    width: 168px;
+}
+option{
+    background-color: rgb(181, 181, 208);
+}
+textarea:hover{
+    background-color: rgb(209, 203, 215);
+    
+
+}
+img{
+    position: absolute;
+
+}
+body{
+    background-color: rgb(224, 123, 123);
+}

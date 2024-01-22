@@ -1,0 +1,49 @@
+body{
+    background-image: radial-gradient(rgb(163, 181, 233), rgb(181, 225, 226));
+    background-repeat: no-repeat;
+    height: 800px;
+
+}
+
+.form{
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    font-size: 30px;
+    color:rgb(85, 82, 83) ;
+}
+.form1{
+    position: absolute;
+    left: 600px;
+    top: 100px;
+    font-size:30px ;
+    color:rgb(85, 82, 83) ;
+}
+h1{
+    text-align: center;
+    background-color: rgb(233, 227, 233);
+    
+    color: rgb(12, 12, 12);
+}
+button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: blue;
+    background-color: rgb(162, 160, 164);
+    border-color: gray;
+    border-radius: 20px;
+}
+a{
+    position: absolute;
+    top: 30px;
+    text-decoration: none;
+    color: bisque;
+}
+img{
+    height: 35px;
+    margin-top: -7px;
+    opacity:0.7;
+
+
+}

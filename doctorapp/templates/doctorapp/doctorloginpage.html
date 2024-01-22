@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+.img{
+    position: absolute;
+    top: 150px;
+    left:230px;
+    height: 500px;
+    width: 1000px;
+    opacity: 0.5;
+}
+.dis{
+    position: absolute;
+    top: 240px;
+    left:590px;
+    font-size: 20px;
+}
+body{
+    background-image: linear-gradient(rgb(171, 219, 251),rgb(242, 140, 242));
+    background-repeat: no-repeat;
+    height: 700px;
+}
+h1{
+    color: #0D1026;
+    font-size: 50px;  
+}
+label{
+    color: rgb(20, 20, 22);
+    font-size: 40px;
+}
+button{
+     position: absolute;
+     left: 200px;
+     width: 100px;
+     height: 30px;
+     background-color: rgb(136, 141, 159);
+     font-size: 20px;
+     color: white;
+     border-radius: 10px 10px;
+     border-color:rgb(136, 141, 159) ;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <img class="img" src="{% static 'images\pedia.jpeg' %}" alt="">
+    </div>
+    <div class="dis">
+    <form action="{% url 'doctorapp:appoint' %}" method=""  name="adminlogin" id=" loginform1" onsubmit="return loginform()">
+        <h1>DOCTOR LOGIN</h1>
+        <div class="form">
+        <div class="form1">
+            <p id="error" style="color: red;"></p>
+        <label class="lable" for="">username</label>
+        <input type="text" name="user" id="Doctor" ><br><br>
+        <label class="lable2" for="">password</label>
+        <input type="password" name="pass1" id="Pass" palceholder="password"><br><br> 
+      <a href="{% url 'doctorapp:appoint' %}"><button type="submit"    class="btn btn-outline-dark" type="submit">Login</button></a>
+
+        </div>
+    
+        </div>
+
+    </div>
+    
+    <a class= "and" href="{% url 'patientapp:home' %}"><img src="{% static 'images/home.png' %}" alt="" width="30px"></a>
+    </form>
+    
+        <script src="{% static 'js/doctorloginpage.js' %}"></script>
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

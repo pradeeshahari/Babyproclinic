@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/doctoraddpage.css' %}">
+    <style>
+        .img{
+            position: absolute;
+            top:-100px;
+            left: 1100px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>ADD Doctor</h1>
+    <p id="error" style="color: red;"></p> 
+    <div class="form" action=" " id="add">
+        <p class="para" style="color: rgb(7, 92, 32);">{{para}}</p>
+    <form action="" method="POST" id ="clr" novalidate enctype="multipart/form-data">
+        {% csrf_token %}
+    <label for="">Username</label>
+    <input type="text" name="username" id="" placeholder=""><br><br>
+    <label for="">password</label>
+    <input type="password" name="password" id="pass" placeholder=""><br><br>
+    <form class="form" action=""name="" id="clear">
+    <label for="">roll no</label>
+    <input type="text" name="roll_no" id="" placeholder="id"><br><br>
+    <label for="">age</label> 
+    <input type="number" name="age" id=""><br><br>
+    <label for="">images</label>
+    <input type="file" name="image" id="">
+    <label for="">gender</label>
+    <select name="gender" id="gender">
+        <option value="male">male</option>
+        <option value="female">female</option>
+    
+
+    </select><br><br>
+    <label for="">phone number</label>
+    <input type="number" name="no" id=""><br><br>
+    <button id="clr" onclick="clearbox()">clear</button><br><br>
+    <form class="form1" action="" id="add"> 
+    <button onclick="addDetails()">ADD</button>
+    <a href="{% url 'babyapp:view' %}"><img class="img" src="{% static 'images/view.png' %}" alt=""></a>
+    
+    </form>
+    
+
+</div>
+<a href="{% url 'babyapp:panel' %}"><img src="{% static 'images/home.png' %}" alt=""></a>
+
+<script src="{% static 'js/doctoraddjava.js' %}"></script>
+
+
+
+</body>
+</html>

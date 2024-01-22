@@ -1,0 +1,43 @@
+.footer{
+    height: 90px;
+    
+    bottom: 0px;
+  }
+  .footer p{
+    color: white;
+  }
+  img{
+    position: absolute;
+    left: 20px;
+  }
+  .container{
+    height: 22px;
+    opacity: 0.5;
+    
+  }
+  .navbar {
+    background-color: rgb(191, 191, 199);
+
+  }
+  .container-fluid{
+    opacity: 0.5;
+  
+  }
+  .col-12 footer{
+    color: black;
+  }
+  .p1{
+    position: absolute;
+    left: 1300px;
+    top: 20px;
+  }
+  .p2{
+    position: absolute;
+    left: 1300px;
+    top: 40px;
+  }
+  .p3{
+    position: absolute;
+    top: 20px;
+    left: 700px;
+  }
